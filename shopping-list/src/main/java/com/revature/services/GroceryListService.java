@@ -20,5 +20,8 @@ public class GroceryListService {
 		this.groceryListRepo.save(newGroceryList);
 	}
 	
+	public void deleteById(Integer id) {
+		this.groceryListRepo.deleteById(id);
+	}
 	
 }

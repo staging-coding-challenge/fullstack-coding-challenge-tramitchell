@@ -16,8 +16,12 @@ public class ItemService {
 		this.itemRepo = itemRepo;
 	}
 	
-	public void save(Item newItem, Integer groceryListId) {
+	public void save(Item newItem) {
 		
 		this.itemRepo.save(newItem);
+	}
+	
+	public void delete(Integer id, Integer itemId) {
+		this.itemRepo.deleteById(itemId);
 	}
 }

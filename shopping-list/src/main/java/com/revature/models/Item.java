@@ -7,6 +7,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -20,15 +22,31 @@ public class Item {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="ItemGen")
 	private Integer id;
 	
-//	@Column(name="list", nullable=false)
-////	@OneToMany()
-//	private GroceryList list;
-//	
-//	@Column(name="name")
-//	private String name;
-//	
-//	@Enumerated(EnumType.STRING)
-////	@OneToMany()
-//	private Category category;
+//	@JoinColumn(name="GroceryList", nullable=false)
+//	@ManyToOne
+//	private GroceryList groceryList;
+	
+	@Column
+	private Integer groceryListId;
+	
+	@Column(name="name")
+	private String name;
+	
+	@Enumerated(EnumType.STRING)
+//	@OneToMany()
+	private Category category;
+
+	public Item(Integer groceryListId, String name, Category category) {
+		super();
+		this.groceryListId = groceryListId;
+		this.name = name;
+		this.category = category;
+	}
+
+	public Item() {
+		super();
+	}
+	
+	
 
 }
