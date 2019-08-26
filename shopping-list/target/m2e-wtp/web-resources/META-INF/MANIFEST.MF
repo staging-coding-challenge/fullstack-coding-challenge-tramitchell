@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: shopping-list
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Tucker
+Implementation-Vendor-Id: com.revature
+Build-Jdk: 1.8.0_221
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/shopping-list
+Created-By: Maven Integration for Eclipse
+
