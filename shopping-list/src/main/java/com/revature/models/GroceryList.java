@@ -27,6 +27,6 @@ public class GroceryList {
 	@Column(name="description")
 	private String description;
 	
-//	@OneToMany(mappedBy="groceryList")
-//	private Set<Item> items;
+	@OneToMany
+	private Set<Item> items;
 }
